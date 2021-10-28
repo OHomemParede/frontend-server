@@ -53,7 +53,10 @@ export default function Perfil() {
   }
   return (
     <>
-      <SeuPerfil />
+      <SeuPerfil
+        myUsers={myUsers}
+        setMyUsers={setMyUsers}
+      />
       <AdminSidePerfil />
     </>
   )

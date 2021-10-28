@@ -24,6 +24,7 @@ export default function Login() {
     
       if(response.data.perfil == 'admin'){
         setIsAdmin(true)
+        return history.push('/admin')
       }
       history.push('/user')
     }

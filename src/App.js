@@ -33,7 +33,7 @@ export default function App() {
           <Switch>
             <RouteGuard exact path='/' component={HomePage} />
             <RouteGuard privateRoute exact path='/user' component={UsuarioPage} />
-            <AdminGuard adminRoute exact path='/user' component={UsuarioPage} />
+            <AdminGuard adminRoute exact path='/admin' component={UsuarioPage} />
           </Switch>
         </BrowserRouter>
       </MainContext.Provider>

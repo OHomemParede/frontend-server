@@ -18,8 +18,8 @@ export default function CreateRegistro(props) {
     try {
       const bodyReq = { idvacina: vacinaInfo[0], data: dataRelativa, idusuario: usuarioInfo }
       const resp = await API.post("/api/registro/create", bodyReq)
-      const { idregistro, idvacina, data } = resp.data
-      setMyRegistros([...myRegistros, { idregistro, idvacina, data, nomeVacina: vacinaInfo[1] }])
+      const { idregistro, idvacina, data, idusuario } = resp.data
+      setMyRegistros([...myRegistros, { idregistro, idvacina, data, nomeVacina: vacinaInfo[1], idusuario }])
     }
     catch (err) {
       alert(err);
