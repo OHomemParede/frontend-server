@@ -1,6 +1,10 @@
 import axios from "axios"
+import dotenv from 'dotenv'
 
-const url = "https://backend-server-exemplo-em-node.herokuapp.com" 
-const local = "http://localhost:3100"
+dotenv.config()
 
-export default axios.create({ baseURL: local});
+const url = `http://${process.env.API_URL}:${process.env.API_PORT}`  //|| "http://localhost:3100"
+
+console.log('>>>', url)
+
+export default axios.create({ baseURL: url});
